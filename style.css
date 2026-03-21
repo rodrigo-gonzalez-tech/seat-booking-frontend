@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222831;
+  color: #eeeeee;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.movie-selector {
+  margin: 20px 0;
+  gap: 6px;
+  position: relative;
+}
+
+.movie-selector label {
+  margin-right: 10px;
+}
+
+.movie-selector select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: #32363d;
+  color: #eeeeee;
+  padding: 8px 14px;
+  padding-right: 34px;
+  border: 1px solid #4b515c;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.movie-selector select:hover {
+  border-color: #eeeeee;
+}
+
+.movie-selector select:focus {
+  outline: none;
+}
+
+.movie-selector select option {
+  background-color: #31363f;
+  color: #eeeeee;
+}
+
+.movie-selector::after {
+  content: "▾";
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  pointer-events: none;
+  color: #eeeeee;
+  font-size: 0.8rem;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 15px;
+}
+
+.seat {
+  background-color: #4b515c;
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.row .seat:not(.occupied):hover {
+  cursor: pointer;
+  background-color: #707b8b;
+  transform: scale(1.2);
+}
+
+.seat.selected {
+  background-color: #00adb5;
+}
+
+.seat.occupied {
+  background-color: #eeeeee;
+}
+
+.row {
+  display: flex;
+}
+
+.legend {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  border-radius: 6px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+li {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+li small {
+  margin-top: 1px;
+  margin-right: 1px;
+}
+
+.screen {
+  background-color: #eeeeee;
+  height: 70px;
+  width: 100%;
+  border-radius: 2px;
+  margin: 15px 0;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.6);
+}
+
+.text span {
+  color: #00adb5;
+}

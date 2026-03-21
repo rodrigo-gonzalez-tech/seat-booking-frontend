@@ -15,13 +15,14 @@ body {
 }
 
 .movie-selector {
-  margin: 20px 0;
+  margin: 25px 0;
   gap: 6px;
   position: relative;
 }
 
 .movie-selector label {
   margin-right: 10px;
+  font-size: 1.25rem;
 }
 
 .movie-selector select {
@@ -35,7 +36,7 @@ body {
   padding-right: 34px;
   border: 1px solid #4b515c;
   border-radius: 6px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -51,6 +52,7 @@ body {
 .movie-selector select option {
   background-color: #31363f;
   color: #eeeeee;
+  font-size: 1rem;
 }
 
 .movie-selector::after {
@@ -65,7 +67,7 @@ body {
 
 .container {
   perspective: 1000px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .seat {
@@ -122,6 +124,8 @@ li {
 li small {
   margin-top: 1px;
   margin-right: 1px;
+  opacity: 0.75;
+  font-size: 0.8rem;
 }
 
 .screen {
@@ -131,6 +135,10 @@ li small {
   border-radius: 2px;
   margin: 15px 0;
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.6);
+}
+
+p.text {
+  font-size: 1rem;
 }
 
 .text span {

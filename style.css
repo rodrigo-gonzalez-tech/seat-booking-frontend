@@ -96,8 +96,11 @@ body {
 
 .row .seat:not(.occupied):hover {
   cursor: pointer;
-  background-color: #707b8b;
   transform: scale(1.2);
+}
+
+.row .seat:not(.occupied):not(.selected):hover {
+  background-color: #707b8b;
 }
 
 .seat.selected {
